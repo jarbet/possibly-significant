@@ -3,9 +3,10 @@ project:
   output-dir: docs
 
 website:
-  description: "A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here."
-  site-url: https://jarbet.github.io/possibly-significant/
   title: "Possibly Significant"
+  site-url: https://jarbet.github.io/possibly-significant/
+  description: "A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here."
+
   navbar:
     right:
       - text: About
@@ -14,27 +15,8 @@ website:
         href: index.xml
       - icon: house-fill
         href: https://jarbet.github.io/
+
 format:
   html:
     theme: cosmo
     css: styles.css
-    number-sections: TRUE
-    fig-number: TRUE
-    fig-cap-location: margin
-    embed-resources: true
-    anchor-sections: TRUE
-    code-tools: FALSE
-    code-fold: FALSE
-    toc: TRUE
-    toc-open: true
-    toc-depth: 3
-    toc-location: left
-    author:
-    - name: Jaron Arbet
-    citation: true
-
-# Each post renders in its own directory using its own renv.lock file
-execute:
-  dir: file
-  echo: false
-  freeze: auto

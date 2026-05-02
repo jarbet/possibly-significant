@@ -6,3 +6,26 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+format:
+  html:
+    number-sections: true
+    fig-number: true
+    fig-cap-location: margin
+    embed-resources: true
+    anchor-sections: true
+    code-tools: false
+    code-fold: false
+    toc: true
+    toc-open: true
+    toc-depth: 3
+    toc-location: left
+
+author:
+  - name: Jaron Arbet
+
+citation: true
+
+execute:
+  dir: file
+  echo: false

@@ -18,21 +18,21 @@
     "href": "posts/imputation/index.html#continuous",
     "title": "Imputing missing data",
     "section": "2.1 Continuous",
-    "text": "2.1 Continuous\n\nset.seed(123)\n\ndata('geno', package = 'missMDA')\n\n# impute.knn (features in rows, samples in cols)\n# this is my preferred method for high dimensional continuous data since it is relatively fast\nknn.imp &lt;- impute::impute.knn(t(geno))$data\nknn.imp &lt;- data.frame(t(knn.imp), check.names = FALSE)\n\n# PCA (samples in rows, features in cols)\nncomp &lt;- missMDA::estim_ncpPCA(geno, ncp.min = 0, ncp.max = 6)\npca.imp &lt;- missMDA::imputePCA(geno, ncp = ncomp$ncp, scale = TRUE)$completeObs\n\n# missForest\nmf.imp &lt;- missForest::missForest(geno)$ximp"
+    "text": "2.1 Continuous"
   },
   {
     "objectID": "posts/imputation/index.html#categorical",
     "href": "posts/imputation/index.html#categorical",
     "title": "Imputing missing data",
     "section": "2.2 Categorical",
-    "text": "2.2 Categorical\n\ndata('vnf', package = 'missMDA')\n\n# missForest\nmf.imp &lt;- missForest::missForest(vnf)$ximp\n\n# MCA\n#ncomp &lt;- missMDA::estim_ncpMCA(vnf); # slow method to estimate number of components\nmca.imp &lt;- missMDA::imputeMCA(vnf, ncp = 3)$complete.obs"
+    "text": "2.2 Categorical"
   },
   {
     "objectID": "posts/imputation/index.html#mixed-continuouscategorical",
     "href": "posts/imputation/index.html#mixed-continuouscategorical",
     "title": "Imputing missing data",
     "section": "2.3 Mixed continuous/categorical",
-    "text": "2.3 Mixed continuous/categorical\n\ndata('snorena', package = 'missMDA')\n\n# missForest\nmf.imp &lt;- missForest::missForest(snorena)$ximp\n\n# FAMD\n#missMDA::estim_ncpFAMD(snorena); # slow method to estimate number of components\nfamd.imp &lt;- missMDA::imputeFAMD(snorena, ncp = 3)$completeObs"
+    "text": "2.3 Mixed continuous/categorical"
   },
   {
     "objectID": "posts/survival-intro/index.html",
@@ -46,6 +46,6 @@
     "href": "index.html",
     "title": "Possibly Significant",
     "section": "",
-    "text": "Introduction to survival (time-to-event) analysis\n\n\n\nSurvival\n\n\n\nThis is a collection of introductory resources on survival time-to-event analysis that I often share with students and colleagues who are new to the topic.\n\n\n\n\n\nMay 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nImputing missing data\n\n\n\nMissing-data\n\n\n\nIntroduction to methods for imputing missing values\n\n\n\n\n\nMay 1, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Introduction to survival (time-to-event) analysis\n\n\n\nSurvival\n\n\n\nThis is a collection of introductory resources on survival time-to-event analysis that I often share with students and colleagues who are new to the topic.\n\n\n\n\n\nMay 1, 2026\n\n\nJaron Arbet\n\n\n\n\n\n\n\n\n\n\n\n\nImputing missing data\n\n\n\nMissing-data\n\n\n\nIntroduction to methods for imputing missing values\n\n\n\n\n\nMay 1, 2026\n\n\nJaron Arbet\n\n\n\n\n\nNo matching items"
   }
 ]

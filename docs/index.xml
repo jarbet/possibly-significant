@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Possibly Significant</title>
+<link>https://jarbet.github.io/possibly-significant/</link>
+<atom:link href="https://jarbet.github.io/possibly-significant/index.xml" rel="self" type="application/rss+xml"/>
+<description>A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here.</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Fri, 01 May 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introduction to survival (time-to-event) analysis</title>
+  <dc:creator>Jaron Arbet</dc:creator>
+  <link>https://jarbet.github.io/possibly-significant/posts/survival-intro/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Intro</h1>
+<ul>
+<li><a href="https://www.nature.com/articles/s41592-022-01563-7">Quick intro</a></li>
+<li><a href="https://www.openintro.org/go/?id=survival_analysis_in_R&amp;referrer=/book/surv_in_r/index.php">Example R code for common survival analysis methods</a>. Covers 3 of the most common methods used in survival analysis: log-rank test and Kaplan Meir plots for comparing survival curves between groups, and Cox proportional hazards regression model.</li>
+<li><a href="https://www.bmj.com/content/bmj/328/7447/1073.full.pdf">logrank test for comparing survival curves between groups</a></li>
+</ul>
+</section>
+<section id="how-to-interpret-hazard-ratios" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> How to interpret hazard ratios</h1>
+<ul>
+<li><a href="https://journals.asm.org/doi/full/10.1128/aac.48.8.2787-2792.2004">https://journals.asm.org/doi/full/10.1128/aac.48.8.2787-2792.2004</a></li>
+<li>The “hazard ratio” is the most common effect size used in survival analysis. Briefly, it compares the risk of having the event occur in the next instant between groups</li>
+</ul>
+</section>
+<section id="regression-for-time-to-event-outcomes" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Regression for time-to-event outcomes</h1>
+<ul>
+<li><a href="https://www.nature.com/articles/s41592-022-01689-8">https://www.nature.com/articles/s41592-022-01689-8</a></li>
+<li>Intro to the <strong>Cox proportional hazard model</strong> (most common regression model for survival data)</li>
+<li>Also introduces the <strong>accelerated failure time model (AFTR)</strong>. Although less commonly used , this model has a nice interpretation that uses “time ratios”: it compares the ratio of the average time of event in group 1 to the average time of event in group 2.</li>
+</ul>
+</section>
+<section id="machine-learning" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Machine learning</h1>
+<p>Here are 2 popular machine learning models used for time-to-event outcomes:</p>
+<ul>
+<li><a href="https://glmnet.stanford.edu/articles/Coxnet.html">Regularized Cox model</a> (i.e.&nbsp;a modified version of the Cox model that performs automatic feature selection)</li>
+<li><a href="https://www.randomforestsrc.org/articles/survival.html">Random survival forest</a>. Perhaps you’ve heard of “random forests” before, it is one of the most popular machine learning methods that <a href="https://www.jmlr.org/papers/volume15/delgado14a/delgado14a.pdf?source=post_page---------------------------">has been shown to work well across a wide variety of applications</a>.</li>
+</ul>
+<p>The <strong>C-index</strong> can be used to assess the predictive accuracy of a survival model. It is similar to the AUROC in that it ranges from 0 to 1, with 0.5 indicating no predictive ability and 1 indicating perfect predictive ability. Most survival model R functions will calculate the C-index for you, but if not, there are a few R packages for calculating it and comparing C between different models: <a href="https://www.bioconductor.org/packages/release/bioc/html/survcomp.html">survcomp</a>, <a href="https://cran.r-project.org/web/packages/compareC/">compareC</a>, <a href="https://cran.r-project.org/web/packages/survC1/index.html">survC1</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{arbet2026,
+  author = {Arbet, Jaron},
+  title = {Introduction to Survival (Time-to-Event) Analysis},
+  date = {2026-05-01},
+  url = {https://jarbet.github.io/possibly-significant/posts/survival-intro/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-arbet2026" class="csl-entry quarto-appendix-citeas">
+Arbet, Jaron. 2026. <span>“Introduction to Survival (Time-to-Event)
+Analysis.”</span> May 1. <a href="https://jarbet.github.io/possibly-significant/posts/survival-intro/">https://jarbet.github.io/possibly-significant/posts/survival-intro/</a>.
+</div></div></section></div> ]]></description>
+  <category>Survival</category>
+  <guid>https://jarbet.github.io/possibly-significant/posts/survival-intro/</guid>
+  <pubDate>Fri, 01 May 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://jarbet.github.io/possibly-significant/posts/survival-intro/survival.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
+<item>
+  <title>Imputing missing data</title>
+  <dc:creator>Jaron Arbet</dc:creator>
+  <link>https://jarbet.github.io/possibly-significant/posts/imputation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Intro</h1>
+<p><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.58.110405.085530">Missing data analysis: Making it work in the real world</a></p>
+<ul>
+<li>Multiple imputation is the gold standard method for handling missing data but is computationally intensive.</li>
+<li>EM algorithm works well, but lack of general software.</li>
+<li>If doing likelihood-based regression modeling, then as long as you adjust for variables that influence missingness, results will not be biased due to missing data (although patients with missing values are dropped from the model, thus decreasing power).
+<ul>
+<li>Imputation likely still better due to improved power (i.e.&nbsp;all patients can be included).</li>
+</ul></li>
+</ul>
+</section>
+<section id="single-imputation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Single imputation</h1>
+<p>There are various scenarios where one wants to impute missing values a single time:</p>
+<ul>
+<li>When the goal is not statistical inference, but prediction</li>
+<li>If you want to cluster your data to organize it in a heatmap or other figure, must clustering methods can’t handle missing values.</li>
+<li>If the goal is statistical inference, often people will still do single imputation despite multiple imputation being the gold standard. Single imputation is so much easier/faster although more biased.</li>
+</ul>
+<p><strong>R notes</strong>:</p>
+<ul>
+<li>Set the seed beforehand</li>
+<li>All of these methods will throw errors if some features have 0 variance (i.e.&nbsp;they only take on 1 value). Remove such features beforehand.</li>
+<li>For <code>missForest/missMDA</code>: make sure rownames are set to patient.id beforehand</li>
+<li>For <code>impute::impute.knn</code>: make sure rownames are feature names and colnames are patient.id</li>
+</ul>
+<section id="continuous" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="continuous"><span class="header-section-number">2.1</span> Continuous</h2>
+</section>
+<section id="categorical" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="categorical"><span class="header-section-number">2.2</span> Categorical</h2>
+</section>
+<section id="mixed-continuouscategorical" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="mixed-continuouscategorical"><span class="header-section-number">2.3</span> Mixed continuous/categorical</h2>
+</section>
+</section>
+<section id="multiple-imputation" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Multiple imputation</h1>
+<ul>
+<li>As mentioned in the intro, multiple imputation is the gold standard for handling missing data because it accounts for uncertainty in the imputed values.</li>
+<li>Impute dataset multiple times to create <em>multiple imputed datasets</em>. Analyze each dataset separately then pool the results for statistical inference.</li>
+<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/mpr.329">Multiple imputation by chained equations: what is it and how does it work?</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mice/index.html">mice R package</a>
+<ul>
+<li><a href="https://www.jstatsoft.org/article/view/v045i03">mice JSS article</a></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Expand for Session Info
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.5.1 (2025-06-13)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sequoia 15.7.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/Los_Angeles
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+[1] impute_1.84.0    missMDA_1.21     missForest_1.6.1
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6         shape_1.4.6.1        xfun_0.57           
+ [4] ggplot2_4.0.3        htmlwidgets_1.6.4    ggrepel_0.9.8       
+ [7] lattice_0.22-7       vctrs_0.7.3          tools_4.5.1         
+[10] Rdpack_2.6.6         generics_0.1.4       parallel_4.5.1      
+[13] tibble_3.3.1         pan_1.9              cluster_2.1.8.1     
+[16] jomo_2.7-6           pkgconfig_2.0.3      Matrix_1.7-3        
+[19] RColorBrewer_1.1-3   S7_0.2.2             rngtools_1.5.2      
+[22] scatterplot3d_0.3-45 lifecycle_1.0.5      compiler_4.5.1      
+[25] farver_2.1.2         leaps_3.2            codetools_0.2-20    
+[28] htmltools_0.5.9      yaml_2.3.12          glmnet_4.1-10       
+[31] mice_3.19.0          nloptr_2.2.1         pillar_1.11.1       
+[34] FactoMineR_2.14      tidyr_1.3.2          MASS_7.3-65         
+[37] flashClust_1.1-4     DT_0.34.0            reformulas_0.4.4    
+[40] doRNG_1.8.6.3        iterators_1.0.14     rpart_4.1.24        
+[43] boot_1.3-31          foreach_1.5.2        mitml_0.4-5         
+[46] nlme_3.1-168         tidyselect_1.2.1     digest_0.6.39       
+[49] mvtnorm_1.3-7        dplyr_1.2.1          purrr_1.2.2         
+[52] splines_4.5.1        fastmap_1.2.0        grid_4.5.1          
+[55] cli_3.6.6            magrittr_2.0.5       randomForest_4.7-1.2
+[58] survival_3.8-3       broom_1.0.12         scales_1.4.0        
+[61] backports_1.5.1      estimability_1.5.1   rmarkdown_2.31      
+[64] emmeans_2.0.3        nnet_7.3-20          lme4_2.0-1          
+[67] otel_0.2.0           ranger_0.18.0        evaluate_1.0.5      
+[70] knitr_1.51           rbibutils_2.4.1      doParallel_1.0.17   
+[73] rlang_1.2.0          itertools_0.1-3      Rcpp_1.1.1-1.1      
+[76] glue_1.8.1           BiocManager_1.30.27  renv_1.1.5          
+[79] minqa_1.2.8          jsonlite_2.0.0       R6_2.6.1            
+[82] multcompView_0.1-11 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{arbet2026,
+  author = {Arbet, Jaron},
+  title = {Imputing Missing Data},
+  date = {2026-05-01},
+  url = {https://jarbet.github.io/possibly-significant/posts/imputation/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-arbet2026" class="csl-entry quarto-appendix-citeas">
+Arbet, Jaron. 2026. <span>“Imputing Missing Data.”</span> May 1. <a href="https://jarbet.github.io/possibly-significant/posts/imputation/">https://jarbet.github.io/possibly-significant/posts/imputation/</a>.
+</div></div></section></div> ]]></description>
+  <category>Missing-data</category>
+  <guid>https://jarbet.github.io/possibly-significant/posts/imputation/</guid>
+  <pubDate>Fri, 01 May 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://jarbet.github.io/possibly-significant/posts/imputation/missing.jpeg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

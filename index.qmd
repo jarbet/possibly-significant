@@ -1,20 +1,10 @@
 ---
 title: "Possibly Significant"
+
 listing:
   contents: posts
   feed: true
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
-
-code-tools: FALSE
-
-format:
-  html:
-    author: {}
-    citation: false
 ---
