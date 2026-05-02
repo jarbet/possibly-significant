@@ -14,7 +14,7 @@ website:
         href: https://jarbet.github.io/
 format:
   html:
-    theme: cosmo
+    theme: materia
     css: styles.css
     number-sections: TRUE
     fig-number: TRUE
