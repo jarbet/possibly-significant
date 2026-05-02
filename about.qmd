@@ -24,6 +24,6 @@ format:
     author: {}
 ---
 
-A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant.
+A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here.
 
-[View blog posts here.](https://jarbet.github.io/possibly-significant/)
+[View blog posts](https://jarbet.github.io/possibly-significant/)
