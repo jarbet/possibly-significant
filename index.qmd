@@ -15,4 +15,5 @@ code-tools: FALSE
 format:
   html:
     author: {}
+    citation: false
 ---

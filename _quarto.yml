@@ -14,14 +14,14 @@ website:
         href: https://jarbet.github.io/
 format:
   html:
-    theme: materia
+    theme: cosmo
     css: styles.css
     number-sections: TRUE
     fig-number: TRUE
     fig-cap-location: margin
     embed-resources: true
     anchor-sections: TRUE
-    code-tools: TRUE
+    code-tools: FALSE
     code-fold: FALSE
     toc: TRUE
     toc-open: true
@@ -29,6 +29,7 @@ format:
     toc-location: left
     author:
     - name: Jaron Arbet
+    citation: true
 
 # Each post renders in its own directory using its own renv.lock file
 execute:

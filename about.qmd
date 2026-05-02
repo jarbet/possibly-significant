@@ -22,6 +22,7 @@ code-tools: FALSE
 format:
   html:
     author: {}
+    citation: false
 ---
 
 A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here.

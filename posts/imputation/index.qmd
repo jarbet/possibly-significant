@@ -4,7 +4,6 @@ description: "Introduction to methods for imputing missing values"
 categories: [Missing-data]
 image: missing.jpeg
 date: 2026-05-01
-author: Jaron Arbet
 execute:
   dir: file
 ---

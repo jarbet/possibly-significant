@@ -6,7 +6,6 @@ image: survival.png
 execute:
   cache: true
 date: 2026-05-01
-author: Jaron Arbet
 ---
 
 
