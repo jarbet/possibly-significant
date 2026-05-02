@@ -1,5 +1,5 @@
 ---
-title: "Possibly Significant"
+title: ""
 
 listing:
   contents: posts
