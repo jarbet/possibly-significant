@@ -3,13 +3,15 @@ project:
   output-dir: docs
 
 website:
-  description: "An informal stats blog for testing ideas, sharing short R tutorials, and collecting thoughts."
+  description: "A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant here."
   site-url: https://jarbet.github.io/possibly-significant/
   title: "Possibly Significant"
   navbar:
     right:
       - text: About
         href: about.qmd
+      - icon: rss
+        href: index.xml
       - icon: house-fill
         href: https://jarbet.github.io/
 format:
