@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jarbet.github.io/possibly-significant/index.html</loc>
-    <lastmod>2026-05-01T15:18:05.521Z</lastmod>
+    <loc>https://jarbet.github.io/possibly-significant/about.html</loc>
+    <lastmod>2026-05-02T19:52:25.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jarbet.github.io/possibly-significant/posts/imputation/index.html</loc>
+    <lastmod>2026-05-01T15:53:46.134Z</lastmod>
   </url>
   <url>
     <loc>https://jarbet.github.io/possibly-significant/posts/survival-intro/index.html</loc>
     <lastmod>2026-05-01T16:04:56.560Z</lastmod>
   </url>
   <url>
-    <loc>https://jarbet.github.io/possibly-significant/posts/imputation/index.html</loc>
-    <lastmod>2026-05-01T15:53:46.134Z</lastmod>
+    <loc>https://jarbet.github.io/possibly-significant/index.html</loc>
+    <lastmod>2026-05-02T19:39:18.245Z</lastmod>
   </url>
 </urlset>

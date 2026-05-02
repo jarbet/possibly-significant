@@ -1,0 +1,29 @@
+---
+title: Possibly Significant
+image: logo.png
+about:
+  template: jolla
+  image-shape: rectangle
+  image-width: 26em
+  # links:
+  #   - icon: bluesky
+  #     text: Bluesky
+  #     href: https://bsky.app/
+  #   - icon: linkedin
+  #     text: LinkedIn
+  #     href: https://linkedin.com
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com
+
+code-tools: FALSE
+
+
+format:
+  html:
+    author: {}
+---
+
+A statistics and data science blog to test out new ideas, share R tutorials, and collect my thoughts. Perhaps you will find something significant.
+
+View blog posts here.

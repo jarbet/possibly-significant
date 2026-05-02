@@ -8,9 +8,10 @@ website:
   title: "Possibly Significant"
   navbar:
     right:
+      - text: About
+        href: about.qmd
       - icon: house-fill
         href: https://jarbet.github.io/
-
 format:
   html:
     theme: cosmo
