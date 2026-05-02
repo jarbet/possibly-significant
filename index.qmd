@@ -9,4 +9,10 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: true
+
+code-tools: FALSE
+
+format:
+  html:
+    author: {}
 ---
