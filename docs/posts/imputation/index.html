@@ -4120,13 +4120,14 @@ vertical-align: -.125em;
    
   <ul>
   <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro"><span class="header-section-number">1</span> Intro</a></li>
-  <li><a href="#single-imputation" id="toc-single-imputation" class="nav-link" data-scroll-target="#single-imputation"><span class="header-section-number">2</span> Single imputation</a>
+  <li><a href="#sec-single-imputation" id="toc-sec-single-imputation" class="nav-link" data-scroll-target="#sec-single-imputation"><span class="header-section-number">2</span> Single imputation</a>
   <ul class="collapse">
   <li><a href="#continuous" id="toc-continuous" class="nav-link" data-scroll-target="#continuous"><span class="header-section-number">2.1</span> Continuous</a></li>
   <li><a href="#categorical" id="toc-categorical" class="nav-link" data-scroll-target="#categorical"><span class="header-section-number">2.2</span> Categorical</a></li>
   <li><a href="#mixed-continuouscategorical" id="toc-mixed-continuouscategorical" class="nav-link" data-scroll-target="#mixed-continuouscategorical"><span class="header-section-number">2.3</span> Mixed continuous/categorical</a></li>
   </ul></li>
-  <li><a href="#multiple-imputation" id="toc-multiple-imputation" class="nav-link" data-scroll-target="#multiple-imputation"><span class="header-section-number">3</span> Multiple imputation</a></li>
+  <li><a href="#sec-multiple-imputation" id="toc-sec-multiple-imputation" class="nav-link" data-scroll-target="#sec-multiple-imputation"><span class="header-section-number">3</span> Multiple imputation</a></li>
+  <li><a href="#bootstrap-imputation" id="toc-bootstrap-imputation" class="nav-link" data-scroll-target="#bootstrap-imputation"><span class="header-section-number">4</span> Bootstrap imputation</a></li>
   </ul>
 </nav>
 </nav>
@@ -4153,12 +4154,12 @@ vertical-align: -.125em;
 </ul></li>
 </ul>
 </section>
-<section id="single-imputation" class="level1" data-number="2">
+<section id="sec-single-imputation" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Single imputation</h1>
 <p>There are various scenarios where one wants to impute missing values a single time:</p>
 <ul>
 <li>When the goal is not statistical inference, but prediction</li>
-<li>If you want to cluster your data to organize it in a heatmap or other figure, must clustering methods can’t handle missing values.</li>
+<li>If you want to cluster your data to organize it in a heatmap or other figure, most clustering methods can’t handle missing values.</li>
 <li>If the goal is statistical inference, often people will still do single imputation despite multiple imputation being the gold standard. Single imputation is so much easier/faster although more biased.</li>
 </ul>
 <p><strong>R notes</strong>:</p>
@@ -4220,7 +4221,7 @@ vertical-align: -.125em;
 </div>
 </section>
 </section>
-<section id="multiple-imputation" class="level1" data-number="3">
+<section id="sec-multiple-imputation" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Multiple imputation</h1>
 <ul>
 <li>As mentioned in the intro, multiple imputation is the gold standard for handling missing data because it accounts for uncertainty in the imputed values.</li>
@@ -4231,6 +4232,17 @@ vertical-align: -.125em;
 <li><a href="https://www.jstatsoft.org/article/view/v045i03">mice JSS article</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="bootstrap-imputation" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Bootstrap imputation</h1>
+<p>Somewhat related to <a href="#sec-multiple-imputation" class="quarto-xref">Section 3</a> in that you impute multiple times, bootstrap imputation is typically simpler for the analyst to setup. The basic idea is:</p>
+<ol type="1">
+<li>Choose one of the “single imputation methods” from <a href="#sec-single-imputation" class="quarto-xref">Section 2</a></li>
+<li>Do simple nonparametric bootstrap resampling with replacement to create multiple “bootstrap versions” of your dataset</li>
+<li>Impute each bootstrap version of the dataset using the method chosen in step 1</li>
+<li>Analyze each imputed bootstrap dataset separately then pool the results for statistical inference. Standard bootstrap inference methods apply here (e.g. percentile confidence intervals, <a href="https://cran.r-project.org/web/packages/boot.pval/index.html">bootstrap-pvalues</a>, etc.)</li>
+</ol>
+<p>Although generally simpler to implement than multiple imputation (especially if one uses the <code>boot</code> R package), the main downside is it is typically much slower.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

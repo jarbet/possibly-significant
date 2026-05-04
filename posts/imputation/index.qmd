@@ -18,12 +18,12 @@ execute:
 * If doing likelihood-based regression modeling, then as long as you adjust for variables that influence missingness, results will not be biased due to missing data (although patients with missing values are dropped from the model, thus decreasing power).
     * Imputation likely still better due to improved power (i.e. all patients can be included).
 
-# Single imputation
+# Single imputation {#sec-single-imputation}
 
 There are various scenarios where one wants to impute missing values a single time:
 
 * When the goal is not statistical inference, but prediction 
-* If you want to cluster your data to organize it in a heatmap or other figure, must clustering methods can't handle missing values.
+* If you want to cluster your data to organize it in a heatmap or other figure, most clustering methods can't handle missing values.
 * If the goal is statistical inference, often people will still do single imputation despite multiple imputation being the gold standard.  Single imputation is so much easier/faster although more biased.
 
 
@@ -87,13 +87,25 @@ famd.imp <- missMDA::imputeFAMD(snorena, ncp = 3)$completeObs
 ```
 
 
-# Multiple imputation
+# Multiple imputation {#sec-multiple-imputation}
 
 * As mentioned in the intro, multiple imputation is the gold standard for handling missing data because it accounts for uncertainty in the imputed values.
 * Impute dataset multiple times to create *multiple imputed datasets*.  Analyze each dataset separately then pool the results for statistical inference.
 * [Multiple imputation by chained equations: what is it and how does it work?](https://onlinelibrary.wiley.com/doi/abs/10.1002/mpr.329)
 * [mice R package](https://cran.r-project.org/web/packages/mice/index.html)
     * [mice JSS article](https://www.jstatsoft.org/article/view/v045i03)
+
+
+# Bootstrap imputation
+
+Somewhat related to @sec-multiple-imputation in that you impute multiple times, bootstrap imputation is typically simpler for the analyst to setup.  The basic idea is:
+
+1. Choose one of the "single imputation methods" from @sec-single-imputation
+2. Do simple nonparametric bootstrap resampling with replacement to create multiple "bootstrap versions" of your dataset
+3. Impute each bootstrap version of the dataset using the method chosen in step 1
+4. Analyze each imputed bootstrap dataset separately then pool the results for statistical inference.  Standard bootstrap inference methods apply here (e.g. percentile confidence intervals, [bootstrap-pvalues](https://cran.r-project.org/web/packages/boot.pval/index.html), etc.)
+
+Although generally simpler to implement than multiple imputation (especially if one uses the `boot` R package), the main downside is it is typically much slower.
 
 
 :::{.callout-note collapse="true"}
