@@ -1,0 +1,152 @@
+---
+title: "Should you still write code?"
+description: "Resources and thoughts for exploring the question of whether you should still write code given that AI tools can now write code for you."
+categories: [AI]
+date: 2026-11-14
+---
+
+For statistical analysis and data-science projects, lately I've been contemplating the question of ***whether we should still write code*** given the power of modern AI tools like Claude Code/Codex that can easily write code for us. Specifically, I've been thinking about several options:
+
+1.  Should a human write most/all of the code?
+2.  Should an AI write most/all of the code?
+3.  Should there be some sort of hybrid middle ground option between 1-2 ?
+4.  If we do cut back on AI usage and insist on much greater human effort (1), how can we remain competitive in our fields, increase job security and reduce risk of being laid off, especially when most data scientists are increasing their reliance on AI?
+
+I'm still trying to form my thoughts and beliefs on this topic, but in the meantime **I want to share some resources I've found helpful while exploring these questions.**
+
+# Thoughts from Andrew Heiss
+
+I've been following Andrew Heiss' [blog](https://www.andrewheiss.com/blog/) for a while now. Andrew is a data scientist, educator, R + quarto power user, and one of the more creative and original thinkers within the broader data-science community. Here are a few of his posts that relate to this topic which I find helpful:
+
+## Growth requires friction and AI removes it
+
+He recently gave an excellent talk at the [2026 R+AI](https://rconsortium.github.io/RplusAI_website/) conference called [Friction Worth Keeping: What Keeps Us Human When AI Makes Everything Easy](https://www.andrewheiss.com/blog/2026/11/10/r-ai-keynote-friction/).
+
+The introduction of the article provides a nice summary:
+
+> Generative AI removes friction. Need a poster for an event? Slides for stakeholders? An R package to access an API? An answer for a problem set? A feature requiring major refactoring? It’s all a prompt away. Incidental, frustrating friction is disappearing.
+
+> But not all friction is bad. Some friction is formative and central to the human experience. Struggling to learn develops skills and expertise. Creating things slowly gives us time to reflect and develop taste. Working through hard problems builds understanding and judgment. Contributing to a community builds trust.
+
+> AI can eliminate all kinds of friction, producing output that looks polished and convincing whether it’s grounded in human understanding or hollow underneath. How can we tell what friction is worth keeping? This talk explores the difference between friction that gets in our way and friction that makes us who we are, and what keeps us human when our work becomes effortless.
+
+It's harder to tell if a given product/output is trustworthy now:
+
+> I think this is one of the most dangerous features of AI: it trashes our existing heuristics for effort and trust. It used to be that making a slick video or writing a 40-page document implied that you cared enough to at least put in the effort, but now those signals are gone. It’s becoming increasingly difficult to tell what work represents genuine human effort and caring, and what work is the result of a few minutes of prompting and a few dollars of token spend. - [Hadley Wickham](https://substack.hadley.nz/p/what-is-slop)
+
+He also shared a nice forklift/weightlifting analogy that has been circulating online:
+
+> Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way. - [Ted Chiang](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
+
+## Using AI to teach and help you code
+
+Andrew often emphasizes that AIs can be used to *teach*, explain and help you write code, rather than do all coding for you with little to no human involvement.
+
+Some relevant quotes from this [article](https://datavizs26.classes.andrewheiss.com/news/2026-07-08_llms-and-r.html):
+
+> Instead of asking “What’s the average of this column” and getting some made up number, you can ask “How can I calculate the average of this column” and get code like `mean(dataset$column)`, which you can then inspect yourself and make sure it makes sense and is the right thing to use.
+
+> they help you create the code necessary for analyzing data. This, I think, is the future of LLMs/AI in data analysis. It still has to be human driven, with humans making decisions and humans looking at the code and humans understanding the code and humans running the code and humans writing about the output.
+
+## Intentionally limit AI use
+
+Here are some of [Andrew's tips for how he uses AI](https://www.andrewheiss.com/ai/#code), I find these interesting and plan to try them out:
+
+> To avoid falling into over-reliance on LLM-assisted code help, I add as much friction into my workflow as possible. I only use GitHub Copilot and Claude **in the browser**, not through the chat sidebar in Positron or Visual Studio Code. When I use Claude Code, I don’t use it in real projects—I use it in separate projects with simulated data and have it create Quarto files explaining what it does. I treat the code LLMs generate like random answers from StackOverflow or blog posts and generally rewrite it completely. I **disable the inline LLM-based auto complete** in text editors...
+
+I've been using the Claude Code extension in Positron for a while now but I'm tempted to try switching back to the online browser version as Andrew recommends. Or at a minimum, if I do use Claude Code in Positron, trying to use it more in separate environments with simulated data rather than the actual project data.
+
+# Wisdom from Carson Gross
+
+I only recently found [Carson Gross' blog](https://htmx.org/essays/) and he has a lot of wisdom to share on this topic, most of which emphasizes the following point:
+
+
+::: {.callout-important}
+# **Avoid unnecessary complexity!**
+
+In general, we should try our best to avoid having unnecessarily complex code in our work.
+
+AI-generated code with minimal human input tends to be unnecessarily complex, too long, and hard to understand.
+
+Overly complex code becomes much harder to maintain over time, harder to troubleshoot, harder to validate, and *harder to trust*.
+:::
+
+Here's a [funny article](https://grugbrain.dev/) on why unnecessary complexity is bad in code.
+
+So how can we avoid the problems of overly complex code? Well, to start, you need to:
+
+## You need to *write*, *read* and *understand* your code
+
+Carson often refers to [The Sorcerer’s Apprentice Trap](https://www.youtube.com/watch?v=m-W8vUXRfxU) scene in the Disney movie Fantasia to explain why it's so important for us to read and understand our code, and to prevent unnecessary complexity that can easily get out of control:
+
+> “...Yes, AI can generate the code for this assignment. Don’t let it. You have to write the code.”
+>
+> I explain that, if they don’t write the code, they will not be able to effectively read the code. The ability to read code is certainly going to be valuable, maybe more valuable, in an AI-based coding future.
+>
+> If you can’t read the code you are going to fall into [The Sorcerer’s Apprentice Trap](https://www.youtube.com/watch?v=m-W8vUXRfxU), creating systems [you don’t understand and can’t control](https://www.youtube.com/watch?v=GFiWEjCedzY).
+>
+> ...LLM generated code, on the other hand, often does not eliminate accidental complexity and, in fact, can add significant accidental complexity by choosing inappropriate approaches to problems, taking shortcuts, etc.
+>
+> If you can’t read the code, how can you tell?
+And if you want to read the code you must write the code. - [Carson Gross](https://htmx.org/essays/yes-and/)
+
+
+As he explains in another article:
+
+
+> One movie scene that has been
+> consistently coming back to me as I have watched AI garner more and more
+> attention is [The Sorcerer’s Apprentice](https://video.disney.com/watch/sorcerer-s-apprentice-fantasia-4ea9ebc01a74ea59a5867853) from Disney’s movie Fantasia.
+>
+> In this scene the apprentice decides to use magic to
+> assist in the drudgery of cleaning. He enchants a broom which then proceeds to
+> start cleaning things up. Things appear to be going swimmingly for a while,
+> until the broom starts cleaning more and more vigorously, reaching a point
+> where things start going swimmingly literally.
+>
+> The chaos is resolved when the Sorcerer reappears and
+> asserts control over the situation, glaring at the apprentice for his
+> foolishness.
+>
+> This seems like an apt metaphor for the AI era: you
+> want to be a sorcerer and not an apprentice.
+>
+> And a sorcerer has to understand the code. - [Carson Gross](https://htmx.org/essays/code-is-cheap/)
+
+
+Similar to Andrew, Carson also recommends using AI as a teacher and helper when writing code, rather than using AI to write all of the code for you:
+
+> Another thing that I tell my students is that AI, used properly, is a tremendously effective TA. If you don’t use it as a code-generator but rather as a partner to help you understand concepts and techniques, it can provide a huge boost to your intellectual development.
+>
+> One of the most difficult things when learning computer programming is getting “stuck”. You just don’t see the trick or know where to even start well enough to make progress.
+>
+> AI can help you get past these roadblocks, and can be a great TA if used correctly
+
+
+# Keep coding because you enjoy it
+
+Here's a [nice short video](https://www.youtube.com/watch?v=9pFe3NUHkr8) that explains this perspective very well. Unlike the other resources in this post, this video doesn't try to argue which approach is right/wrong, but instead looks at whether you enjoy coding, and if you do, you should keep doing it. Why let AI take your hobby away from you?
+
+A few more miscellaneous supporting quotes:
+
+> I enjoy creating things. I like being the human behind all this stuff. -- [Andrew Heiss](https://www.andrewheiss.com/ai/)
+
+> Much of the work I do is a combination of teaching, research, and writing. I enjoy doing all three; not just the things I produce, but the process itself.
+>
+> If writing is thinking, so too is writing code. I’m fluent in English, and I’m fluent in the R programming language. Both are a means to thinking. If I offload coding or my prose to AI, and by extension, my own thoughts, where’s the joy in that? I don’t use AI much at all to write code simply because I enjoy writing code, the same way a novelist likes writing novels or a philosopher likes crafting a well-argued essay. I derive meaning from the process; not just the final product. - [Miles Williams](https://mileswilliams.substack.com/p/why-i-rarely-use-ai)
+
+# Unresolved questions
+
+So far, I'm very inspired by Andrew Heiss, Carson Gross and others to cut back on my AI usage when coding.  That being said, there are still a few unresolved questions I have:
+
+Let's face it, most fields tend to be fairly competitive, whether you work in Academia or Industry, research can be cooperative but is also competitive, and I know a lot of people feel pressure to perform at a high level in order to increase job security and reduce risk of being laid off.  Given these concerns:
+
+1. How can we cut back on AI usage while still remaining competitive in our fields?
+2. How can we cut back on AI usage while still increasing job security and reducing risk of being laid off?
+
+If you greatly limit your AI usage, as the above references encourage, but your peers in your field now use Claude Code to write >90% of their code (or even 100% of their code), how can you get promoted let alone avoid losing your job?  Even if you create high quality work, if your peers are producing 10 times the output with their AI-usage, isn't there a genuine risk that you will fall behind and "fade away" despite the quality of your work?
+
+I think these questions are especially difficult for junior workers, but still important for senior workers as well.
+
+I'm still exploring these questions and don't have any firm answers yet.  The main thought I have right now is that moving forward, interpersonal human-to-human communication and relationship-building will become increasingly important, especially for growing trust in the work we produce.
+
