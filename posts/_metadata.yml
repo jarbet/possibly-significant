@@ -2,7 +2,7 @@
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+freeze: auto
 
 # Enable banner style title blocks
 title-block-banner: true
@@ -20,6 +20,7 @@ format:
     toc-open: true
     toc-depth: 3
     toc-location: left
+    include-after-body: collapse-citation.html
 
 author:
   - name: Jaron Arbet
