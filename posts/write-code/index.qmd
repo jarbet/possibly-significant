@@ -38,7 +38,7 @@ He also shared a nice forklift/weightlifting analogy that has been circulating o
 
 > Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way. - [Ted Chiang](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 
-## Using AI to teach and help you code
+## Using AI to teach and help you how to code
 
 Andrew often emphasizes that AIs can be used to *teach*, explain and help you write code, rather than do all coding for you with little to no human involvement.
 
@@ -48,7 +48,7 @@ Some relevant quotes from this [article](https://datavizs26.classes.andrewheiss.
 
 > they help you create the code necessary for analyzing data. This, I think, is the future of LLMs/AI in data analysis. It still has to be human driven, with humans making decisions and humans looking at the code and humans understanding the code and humans running the code and humans writing about the output.
 
-## Intentionally limit AI use
+## Rules for using AI
 
 Here are some of [Andrew's tips for how he uses AI](https://www.andrewheiss.com/ai/#code), I find these interesting and plan to try them out:
 

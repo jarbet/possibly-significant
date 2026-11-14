@@ -4094,8 +4094,8 @@ vertical-align: -.125em;
   <li><a href="#thoughts-from-andrew-heiss" id="toc-thoughts-from-andrew-heiss" class="nav-link active" data-scroll-target="#thoughts-from-andrew-heiss"><span class="header-section-number">1</span> Thoughts from Andrew Heiss</a>
   <ul class="collapse">
   <li><a href="#growth-requires-friction-and-ai-removes-it" id="toc-growth-requires-friction-and-ai-removes-it" class="nav-link" data-scroll-target="#growth-requires-friction-and-ai-removes-it"><span class="header-section-number">1.1</span> Growth requires friction and AI removes it</a></li>
-  <li><a href="#using-ai-to-teach-and-help-you-code" id="toc-using-ai-to-teach-and-help-you-code" class="nav-link" data-scroll-target="#using-ai-to-teach-and-help-you-code"><span class="header-section-number">1.2</span> Using AI to teach and help you code</a></li>
-  <li><a href="#intentionally-limit-ai-use" id="toc-intentionally-limit-ai-use" class="nav-link" data-scroll-target="#intentionally-limit-ai-use"><span class="header-section-number">1.3</span> Intentionally limit AI use</a></li>
+  <li><a href="#using-ai-to-teach-and-help-you-how-to-code" id="toc-using-ai-to-teach-and-help-you-how-to-code" class="nav-link" data-scroll-target="#using-ai-to-teach-and-help-you-how-to-code"><span class="header-section-number">1.2</span> Using AI to teach and help you how to code</a></li>
+  <li><a href="#rules-for-using-ai" id="toc-rules-for-using-ai" class="nav-link" data-scroll-target="#rules-for-using-ai"><span class="header-section-number">1.3</span> Rules for using AI</a></li>
   </ul></li>
   <li><a href="#wisdom-from-carson-gross" id="toc-wisdom-from-carson-gross" class="nav-link" data-scroll-target="#wisdom-from-carson-gross"><span class="header-section-number">2</span> Wisdom from Carson Gross</a>
   <ul class="collapse">
@@ -4150,8 +4150,8 @@ vertical-align: -.125em;
 <p>Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way. - <a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art">Ted Chiang</a></p>
 </blockquote>
 </section>
-<section id="using-ai-to-teach-and-help-you-code" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="using-ai-to-teach-and-help-you-code"><span class="header-section-number">1.2</span> Using AI to teach and help you code</h2>
+<section id="using-ai-to-teach-and-help-you-how-to-code" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="using-ai-to-teach-and-help-you-how-to-code"><span class="header-section-number">1.2</span> Using AI to teach and help you how to code</h2>
 <p>Andrew often emphasizes that AIs can be used to <em>teach</em>, explain and help you write code, rather than do all coding for you with little to no human involvement.</p>
 <p>Some relevant quotes from this <a href="https://datavizs26.classes.andrewheiss.com/news/2026-07-08_llms-and-r.html">article</a>:</p>
 <blockquote class="blockquote">
@@ -4161,8 +4161,8 @@ vertical-align: -.125em;
 <p>they help you create the code necessary for analyzing data. This, I think, is the future of LLMs/AI in data analysis. It still has to be human driven, with humans making decisions and humans looking at the code and humans understanding the code and humans running the code and humans writing about the output.</p>
 </blockquote>
 </section>
-<section id="intentionally-limit-ai-use" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="intentionally-limit-ai-use"><span class="header-section-number">1.3</span> Intentionally limit AI use</h2>
+<section id="rules-for-using-ai" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="rules-for-using-ai"><span class="header-section-number">1.3</span> Rules for using AI</h2>
 <p>Here are some of <a href="https://www.andrewheiss.com/ai/#code">Andrew’s tips for how he uses AI</a>, I find these interesting and plan to try them out:</p>
 <blockquote class="blockquote">
 <p>To avoid falling into over-reliance on LLM-assisted code help, I add as much friction into my workflow as possible. I only use GitHub Copilot and Claude <strong>in the browser</strong>, not through the chat sidebar in Positron or Visual Studio Code. When I use Claude Code, I don’t use it in real projects—I use it in separate projects with simulated data and have it create Quarto files explaining what it does. I treat the code LLMs generate like random answers from StackOverflow or blog posts and generally rewrite it completely. I <strong>disable the inline LLM-based auto complete</strong> in text editors…</p>
@@ -4254,6 +4254,24 @@ vertical-align: -.125em;
 Arbet, Jaron. 2026. <span>“Should You Still Write Code?”</span> November
 14. <a href="https://jarbet.github.io/possibly-significant/posts/write-code/">https://jarbet.github.io/possibly-significant/posts/write-code/</a>.
 </div></div></section></div></main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var sec = document.getElementById("quarto-citation");
+  if (!sec) return;
+  var h = sec.querySelector("h2.quarto-appendix-heading");
+  var details = document.createElement("details");
+  details.className = "callout callout-style-simple callout-note";
+  details.style.padding = "0.5em 1em";
+  var summary = document.createElement("summary");
+  summary.textContent = "How to Cite this Article";
+  summary.style.cursor = "pointer";
+  summary.style.fontWeight = "600";
+  details.appendChild(summary);
+  if (h) h.remove();
+  while (sec.firstChild) details.appendChild(sec.firstChild);
+  sec.appendChild(details);
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

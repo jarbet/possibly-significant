@@ -1,0 +1,18 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var sec = document.getElementById("quarto-citation");
+  if (!sec) return;
+  var h = sec.querySelector("h2.quarto-appendix-heading");
+  var details = document.createElement("details");
+  details.className = "callout callout-style-simple callout-note";
+  details.style.padding = "0.5em 1em";
+  var summary = document.createElement("summary");
+  summary.textContent = "How to Cite this Article";
+  summary.style.cursor = "pointer";
+  summary.style.fontWeight = "600";
+  details.appendChild(summary);
+  if (h) h.remove();
+  while (sec.firstChild) details.appendChild(sec.firstChild);
+  sec.appendChild(details);
+});
+</script>
